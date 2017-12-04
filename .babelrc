@@ -8,7 +8,9 @@
       }
     ],
     "react"
-  ]
+  ],
+  "plugins": ["transform-class-properties"]
 }
 
 // can have different babelrcs for dev vs prod. like "browsers": [last 1 Chrome version]
+// only need babel at dev time. the static assets have alredy been transpiled by runtime

@@ -11,7 +11,7 @@ module.exports = {
     contentBase: `${__dirname}/build`
   },
   plugins: [
-    new HTMLPlugin()
+    new HTMLPlugin({ template: `${__dirname}/src/index.html` })
   ],
   module: {
     rules: [
@@ -19,6 +19,10 @@ module.exports = {
         test: /\.js$/,  //regex - if the file ends in .js, then exclude node modules
         exclude: /node_modules/,  // we don't want to edit the node_modules files ourselves
         loader: 'babel-loader',
+      },
+      {
+        test: /\.css$/,
+        loader: ['style-loader', 'css-loader']
       }
     ]
   }

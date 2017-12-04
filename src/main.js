@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import App from './App';
 
 ReactDom.render(
-  <div>Hello World</div>,
-  document.body
+  <App />,
+  document.getElementById('root')   // if we
 );
 
 
