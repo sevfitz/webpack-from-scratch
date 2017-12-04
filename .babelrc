@@ -6,6 +6,9 @@
           "browsers": ["last 2 versions"]
         }
       }
-    ]
+    ],
+    "react"
   ]
 }
+
+// can have different babelrcs for dev vs prod. like "browsers": [last 1 Chrome version]

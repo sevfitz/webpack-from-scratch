@@ -29,4 +29,5 @@ module.exports = {
 
 // will create the plugins we need on the fly
 
-// https://github.com/sevfitz/webpack-from-scratch.git
+
+// this is called transpiling - going from one flavor of JS to another flavor of JS. that is what babel does for us
