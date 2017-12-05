@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
+import Greeting from './Greeting';
+import GreetingForm from './GreetingForm';
 
 export default class App extends Component {
   constructor(props) {
@@ -13,13 +15,16 @@ export default class App extends Component {
   handleChange = ({ target }) => this.setState({ [target.name]: target.value });
 
   render() {
+    const { salutation, name } = this.state;
     return (
       <main>
-        <div className="greeting">{this.state.salutation}</div>
+        <Greeting salutation={salutation} name={name}/>
+        <GreetingForm salutation={salutation} name={name} onChange={this.handleChange}/>
+        {/* <div className="greeting"><span>{this.state.salutation}</span></div>
         <div>
           Hello {this.state.name}
         </div>
-        <input name="name" value={this.state.name} onChange={this.handleChange} />
+        <input name="name" value={this.state.name} onChange={this.handleChange} /> */}
       </main>
     )
   }
